@@ -12,70 +12,70 @@ def print_diagnostics(csv_name):
 
     print("==== Flow Feed ====")
     print(f"Sensor feed flow reading:   {df["Flow_Feed_Noisy"][0]:.4f}")
-    print(f"Predicted feed flow:        {df["Flow_Feed_pred"][0]:.4f}")
-    print(f"Difference in feed flow:    {df["Flow_Feed_pred"][0] - df["Flow_Feed_Noisy"][0]:.4f}")
+    print(f"Predicted feed flow:        {df["Flow_Feed_pred_True_State"][0]:.4f}")
+    print(f"Difference in feed flow:    {df["Flow_Feed_pred_True_State"][0] - df["Flow_Feed_Noisy"][0]:.4f}")
     print("==== Flow Distillate ====")
     print(f"Sensor distillate flow reading: {df["Flow_Top_Noisy"][0]:.4f}")
-    print(f"Predicted distillate flow:      {df["Flow_Top_pred"][0]:.4f}")
-    print(f"Difference in distillate flow:  {df["Flow_Top_pred"][0] - df["Flow_Top_Noisy"][0]:.4f}")
+    print(f"Predicted distillate flow:      {df["Flow_Top_pred_True_State"][0]:.4f}")
+    print(f"Difference in distillate flow:  {df["Flow_Top_pred_True_State"][0] - df["Flow_Top_Noisy"][0]:.4f}")
     print("==== Flow Bottom ====")
     print(f"Sensor bottom flow reading: {df["Flow_Bottom_Noisy"][0]:.4f}")
-    print(f"Predicted bottom flow:      {df["Flow_Bottom_pred"][0]:.4f}")
-    print(f"Difference in bottom flow:  {df["Flow_Bottom_pred"][0] - df["Flow_Bottom_Noisy"][0]:.4f}")
+    print(f"Predicted bottom flow:      {df["Flow_Bottom_pred_True_State"][0]:.4f}")
+    print(f"Difference in bottom flow:  {df["Flow_Bottom_pred_True_State"][0] - df["Flow_Bottom_Noisy"][0]:.4f}")
 
     print("\n==== Composition Feed ====")
     print(f"Sensor feed composition reading: {df["X_Feed_Noisy"][0]:.4f}")
-    print(f"Predicted composition flow:      {df["X_Feed_pred"][0]:.4f}")
-    print(f"Difference in composition flow:  {df["X_Feed_pred"][0] - df["X_Feed_Noisy"][0]:.4f}")
+    print(f"Predicted composition flow:      {df["X_Feed_pred_True_State"][0]:.4f}")
+    print(f"Difference in composition flow:  {df["X_Feed_pred_True_State"][0] - df["X_Feed_Noisy"][0]:.4f}")
     print("==== Composition Top ====")
     print(f"Sensor feed composition reading: {df["X_Top_Noisy"][0]:.4f}")
-    print(f"Predicted composition flow:      {df["X_Top_pred"][0]:.4f}")
-    print(f"Difference in composition flow:  {df["X_Top_pred"][0] - df["X_Top_Noisy"][0]:.4f}")   
+    print(f"Predicted composition flow:      {df["X_Top_pred_True_State"][0]:.4f}")
+    print(f"Difference in composition flow:  {df["X_Top_pred_True_State"][0] - df["X_Top_Noisy"][0]:.4f}")   
     print("==== Composition Bottom ====")
     print(f"Sensor feed composition reading: {df["X_Bottom_Noisy"][0]:.4f}")
-    print(f"Predicted composition:           {df["X_Bottom_pred"][0]:.4f}")
-    print(f"Difference in composition:       {df["X_Bottom_pred"][0] - df["X_Bottom_Noisy"][0]:.4f}")
+    print(f"Predicted composition:           {df["X_Bottom_pred_True_State"][0]:.4f}")
+    print(f"Difference in composition:       {df["X_Bottom_pred_True_State"][0] - df["X_Bottom_Noisy"][0]:.4f}")
 
     print("\n==== Temperature Feed ====")
     print(f"Sensor feed temperature reading: {df["Tf_Noisy"][0]:.4f}")
-    print(f"Predicted temperature:           {df["Tf_pred"][0]:.4f}")
-    print(f"Difference in temperature:       {df["Tf_pred"][0] - df["Tf_Noisy"][0]:.4f}")
+    print(f"Predicted temperature:           {df["Tf_pred_True_State"][0]:.4f}")
+    print(f"Difference in temperature:       {df["Tf_pred_True_State"][0] - df["Tf_Noisy"][0]:.4f}")
     print("==== Temperature Top ====")
     print(f"Sensor top temperature reading: {df["T_Top_Noisy"][0]:.4f}")
-    print(f"Predicted temperature:          {df["T_Top_pred"][0]:.4f}")
-    print(f"Difference in temperature:      {df["T_Top_pred"][0] - df["T_Top_Noisy"][0]:.4f}")
+    print(f"Predicted temperature:          {df["T_Top_pred_True_State"][0]:.4f}")
+    print(f"Difference in temperature:      {df["T_Top_pred_True_State"][0] - df["T_Top_Noisy"][0]:.4f}")
     print("==== Temperature Bottom ====")
     print(f"Sensor bottom temperature reading: {df["T_Bottom_Noisy"][0]:.4f}")
-    print(f"Predicted temperature:             {df["T_Bottom_pred"][0]:.4f}")
-    print(f"Difference in temperature:         {df["T_Bottom_pred"][0] - df["T_Bottom_Noisy"][0]:.4f}")
+    print(f"Predicted temperature:             {df["T_Bottom_pred_True_State"][0]:.4f}")
+    print(f"Difference in temperature:         {df["T_Bottom_pred_True_State"][0] - df["T_Bottom_Noisy"][0]:.4f}")
 
     print("\n==== Reflux Ratio ====")
     print(f"Sensor reflux reading: {df["R_Noisy"][0]:.4f}")
-    print(f"Predicted reflux:      {df["R_pred"][0]:.4f}")
-    print(f"Difference in reflux:  {df["R_pred"][0] - df["R_Noisy"][0]:.4f}")
+    print(f"Predicted reflux:      {df["R_pred_True_State"][0]:.4f}")
+    print(f"Difference in reflux:  {df["R_pred_True_State"][0] - df["R_Noisy"][0]:.4f}")
 
     print("\n==== Steam Factor ====")
     print(f"Sensor steam factor reading: {df["steam_factor_Noisy"][0]:.4f}")
-    print(f"Predicted steam factor:      {df["steam_factor_pred"][0]:.4f}")
-    print(f"Difference in steam factor:  {df["steam_factor_pred"][0] - df["steam_factor_Noisy"][0]:.4f}")
+    print(f"Predicted steam factor:      {df["steam_factor_pred_True_State"][0]:.4f}")
+    print(f"Difference in steam factor:  {df["steam_factor_pred_True_State"][0] - df["steam_factor_Noisy"][0]:.4f}")
 
     print("\n\n=========== Sensor accuracy in % Difference (Measured vs Predicted) ===========")
     print("==== Flow Sensors ====")
-    print(f"Feed sensor mismatch:       {percentage_difference(df["Flow_Feed_pred"][0], df["Flow_Feed_Noisy"][0]):.4f} %")
-    print(f"Distillate sensor mismatch: {percentage_difference(df["Flow_Top_pred"][0], df["Flow_Top_Noisy"][0]):.4f} %")
-    print(f"Bottom sensor mismatch:     {percentage_difference(df["Flow_Bottom_pred"][0], df["Flow_Bottom_Noisy"][0]):.4f} %")
+    print(f"Feed sensor mismatch:       {percentage_difference(df["Flow_Feed_pred_True_State"][0], df["Flow_Feed_Noisy"][0]):.4f} %")
+    print(f"Distillate sensor mismatch: {percentage_difference(df["Flow_Top_pred_True_State"][0], df["Flow_Top_Noisy"][0]):.4f} %")
+    print(f"Bottom sensor mismatch:     {percentage_difference(df["Flow_Bottom_pred_True_State"][0], df["Flow_Bottom_Noisy"][0]):.4f} %")
     print("==== Composition Sensors ====")
-    print(f"Feed sensor mismatch:       {percentage_difference(df["X_Feed_pred"][0], df["X_Feed_Noisy"][0]):.4f} %")
-    print(f"Distillate sensor mismatch: {percentage_difference(df["X_Top_pred"][0], df["X_Top_Noisy"][0]):.4f} %")
-    print(f"Bottom sensor mismatch:     {percentage_difference(df["X_Bottom_pred"][0], df["X_Bottom_Noisy"][0]):.4f} %")
+    print(f"Feed sensor mismatch:       {percentage_difference(df["X_Feed_pred_True_State"][0], df["X_Feed_Noisy"][0]):.4f} %")
+    print(f"Distillate sensor mismatch: {percentage_difference(df["X_Top_pred_True_State"][0], df["X_Top_Noisy"][0]):.4f} %")
+    print(f"Bottom sensor mismatch:     {percentage_difference(df["X_Bottom_pred_True_State"][0], df["X_Bottom_Noisy"][0]):.4f} %")
     print("==== Temperature Sensors ====")
-    print(f"Feed sensor mismatch:       {percentage_difference(df["Tf_pred"][0], df["Tf_Noisy"][0]):.4f} %")
-    print(f"Distillate sensor mismatch: {percentage_difference(df["T_Top_pred"][0], df["T_Top_Noisy"][0]):.4f} %")
-    print(f"Bottom sensor mismatch:     {percentage_difference(df["T_Bottom_pred"][0], df["T_Bottom_Noisy"][0]):.4f} %")
+    print(f"Feed sensor mismatch:       {percentage_difference(df["Tf_pred_True_State"][0], df["Tf_Noisy"][0]):.4f} %")
+    print(f"Distillate sensor mismatch: {percentage_difference(df["T_Top_pred_True_State"][0], df["T_Top_Noisy"][0]):.4f} %")
+    print(f"Bottom sensor mismatch:     {percentage_difference(df["T_Bottom_pred_True_State"][0], df["T_Bottom_Noisy"][0]):.4f} %")
     print("==== Reflux Ratio Sensor ====")
-    print(f"Sensor mismatch:            {percentage_difference(df["R_pred"][0], df["R_Noisy"][0]):.4f} %")
+    print(f"Sensor mismatch:            {percentage_difference(df["R_pred_True_State"][0], df["R_Noisy"][0]):.4f} %")
     print("==== Steam Factor Sensor ====")
-    print(f"Sensor mismatch:            {percentage_difference(df["steam_factor_pred"][0], df["steam_factor_Noisy"][0]):.4f} %")
+    print(f"Sensor mismatch:            {percentage_difference(df["steam_factor_pred_True_State"][0], df["steam_factor_Noisy"][0]):.4f} %")
 
     print("\n\n=========== Fault Detection ===========")
     print(f"Fault type:     {df["Fault_Class"][0]}")
@@ -122,17 +122,17 @@ def plot_diagnostics(csv_name):
     ]
 
     pred = [
-        row["Flow_Feed_pred"],
-        row["Flow_Top_pred"],
-        row["Flow_Bottom_pred"],
-        row["X_Feed_pred"],
-        row["X_Top_pred"],
-        row["X_Bottom_pred"],
-        row["Tf_pred"],
-        row["T_Top_pred"],
-        row["T_Bottom_pred"],
-        row["R_pred"],
-        row["steam_factor_pred"]
+        row["Flow_Feed_pred_True_State"],
+        row["Flow_Top_pred_True_State"],
+        row["Flow_Bottom_pred_True_State"],
+        row["X_Feed_pred_True_State"],
+        row["X_Top_pred_True_State"],
+        row["X_Bottom_pred_True_State"],
+        row["Tf_pred_True_State"],
+        row["T_Top_pred_True_State"],
+        row["T_Bottom_pred_True_State"],
+        row["R_pred_True_State"],
+        row["steam_factor_pred_True_State"]
     ]
 
     noisy_norm = []

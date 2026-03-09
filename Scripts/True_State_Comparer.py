@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 def run(csv_name):
-    Append_Dataset = False
+    Append_Dataset = True
 
     print("---------------------------")
     print("Loading composition model...")
@@ -62,3 +62,49 @@ def run(csv_name):
     print("Predicting fault profile...")
     pred = model.predict(X)
     pred = scaler_Y.inverse_transform(pred)
+
+    if Append_Dataset:
+        print("Appending predictions to dataset...")
+        col_index = 0
+        df["Flow_Feed_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["Flow_Top_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["Flow_Bottom_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["R_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["pf_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["steam_factor_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["Tf_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["T_Top_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["T_Bottom_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["X_Feed_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["X_Top_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        df["X_Bottom_pred_True_State"] = pred[:, col_index]
+        col_index += 1
+        # Internal trays
+        for tray in range(n_trays):
+            if col_index >= pred.shape[1]:
+                break
+            df[f"X_{tray}_pred_True_State"] = pred[:, col_index]
+            col_index += 1
+        for tray in range(n_trays):
+            if col_index >= pred.shape[1]:
+                break
+            df[f"T_{tray}_pred_True_State"] = pred[:, col_index]
+            col_index += 1
+
+    output_file = csv_name
+
+    df.to_csv(output_file, index=False)
+
+    print("\nDataset saved:", output_file)
+    print("Script complete.")
